@@ -201,3 +201,94 @@ body {
     cursor: pointer;
     transition: 0.3s;
 }
+
+/* ----------meals page ----------- */
+
+.collection {
+
+    color: black;
+    display: flex;
+}
+
+.meals-img {
+    height: 400px;
+
+}
+
+.meals {
+    display: flex;
+    background: linear-gradient(to bottom, rgb(55, 59, 55), rgb(0, 0, 0));
+    flex-direction: column;
+
+    border-radius: 20px;
+    gap: 20px;
+    align-items: center;
+    font-size: 25px;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 730px;
+    background-image: url(/assets/image/white.jpg);
+}
+
+.sample-meals {
+    color: black;
+    margin-top: 40px;
+    border-radius: 20px;
+    justify-content: space-between;
+
+
+}
+
+
+
+/*------- burgers -----------*/
+
+.image-sample {
+    height: 250px;
+
+    border-radius: 5px;
+}
+
+
+.sample {
+    color: black;
+    margin-top: 40px;
+    border-radius: 20px;
+    justify-content: space-between;
+    background-image: url(/assets/image/white.jpg);
+
+
+}
+
+.row {
+
+    display: flex;
+    margin-top: 40px;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+.item-box {
+    display: flex;
+    background: linear-gradient();
+    flex-direction: column;
+    border: 4px;
+    border-radius: 20px;
+    gap: 20px;
+    align-items: center;
+    font-size: 25px;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 400px;
+}
+
+.btn-view {
+    background: linear-gradient(to bottom,  #ce0d0d, #d47f0f, #f5f229);
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+
