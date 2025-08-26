@@ -245,7 +245,7 @@ body {
 
 .image-sample {
     height: 250px;
-
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -280,6 +280,12 @@ body {
     margin: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
     width: 400px;
+    padding: auto;
+}
+
+.item-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .btn-view {
