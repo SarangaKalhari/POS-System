@@ -187,3 +187,17 @@ body {
 } 
 
 
+/* --------contact page ------------ */
+
+.send-btn{
+     width: 80%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background: linear-gradient(to right, #78d428, #d5ba4f, #ef3939);
+    cursor: pointer;
+    transition: 0.3s;
+}
