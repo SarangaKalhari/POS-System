@@ -4,33 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buger Bug</title>
+    <title>MOS Burgers</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
+    <div class="d-flex flex-nowrap">
 
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"> <a href="/"
+        <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" style="width: 280px;"> <a href="/"
                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> <svg
-                    class="bi me-2" width="40" height="32" aria-hidden="true">
+                    class="bi pe-none me-2" width="40" height="32" aria-hidden="true">
                     <use xlink:href="#bootstrap"></use>
-                </svg> <span class="fs-4">Simple header</span> </a>
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                </svg> <span class="fs-4">Sidebar</span> </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item"> <a href="#" class="nav-link active" aria-current="page"> <svg
+                            class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
+                            <use xlink:href="#home"></use>
+                        </svg>
+                        Home
+                    </a> </li>
+                <li> <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16"
+                            height="16" aria-hidden="true">
+                            <use xlink:href="#speedometer2"></use>
+                        </svg>
+                        Reports
+                    </a> </li>
+                <li> <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16"
+                            height="16" aria-hidden="true">
+                            <use xlink:href="#table"></use>
+                        </svg>
+                        Orders
+                    </a> </li>
+                <li> <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16"
+                            height="16" aria-hidden="true">
+                            <use xlink:href="#grid"></use>
+                        </svg>
+                        Products
+                    </a> </li>
+                <li> <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16"
+                            height="16" aria-hidden="true">
+                            <use xlink:href="#people-circle"></use>
+                        </svg>
+                        Customers
+                    </a> </li>
             </ul>
-        </header>
+
+
+        </div>
+
+        <!-- Main Menu Area -->
+        <div class="col-7 p-4">
+
+            <!-- Top Bar -->
+            <div class="d-flex justify-content-between mb-3">
+                <h4>Menu</h4>
+                <input class="form-control w-50" placeholder="Search products...">
+            </div>
+
+            <!-- Category Tabs -->
+            <ul class="nav nav-pills mb-3">
+                <li class="nav-item"><a class="nav-link active" href="#">All Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Burgers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Beverages</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Appetizers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Desserts</a></li>
+
+            </ul>
+
+            <!-- Products Grid -->
+            <div class="row g-3" id="productList">
+                <!-- Cards injected by JS -->
+            </div>
+
+        </div>
+
     </div>
 
 
-    
-<!-- 
+
+    <!-- 
     <section class="hero-section">
         <div class="hero-content">
             <h1>Welcome to Burger Bug</h1>
