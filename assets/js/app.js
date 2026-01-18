@@ -74,3 +74,4 @@ function calculateSelectedTotal() {
     });
     document.getElementById("total-price").textContent = `Total: $${total.toFixed(2)}`;
 }
+
