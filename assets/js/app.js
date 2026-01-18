@@ -77,15 +77,3 @@ console.log("hello !")
 //     document.getElementById("total-price").textContent = `Total: $${total.toFixed(2)}`;
 // }
 
-<<<<<<< HEAD
-=======
-    checkboxes.forEach(cb => {
-        if(cb.checked){
-            let numericPrice = parseFloat(cb.dataset.price.replace(/[^0-9.]/g, ""));
-            total += numericPrice;
-        }
-    });
-    document.getElementById("total-price").textContent = `Total: $${total.toFixed(2)}`;
-}
-
->>>>>>> 77a7d70e53db72639741c7019d13fc22880acf42
