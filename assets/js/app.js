@@ -1,5 +1,20 @@
 console.log("hello !")
 
+function increaseQty(btn) {
+    let qtySpan = btn.parentElement.querySelector(".qty");
+    let qty = parseInt(qtySpan.innerText);
+    qtySpan.innerText = qty + 1;
+}
+
+function decreaseQty(btn) {
+    let qtySpan = btn.parentElement.querySelector(".qty");
+    let qty = parseInt(qtySpan.innerText);
+
+    if (qty > 1) {
+        qtySpan.innerText = qty - 1;
+    }
+}
+
 
 
 // let arrayList = JSON.parse(localStorage.getItem("cart")) || [];
