@@ -4,15 +4,7 @@
   z-index: 1050;
 }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  /* top: 60px; */
-  left: 5px;
-  width: 16.66%; /* col-md-2 */
-  height: 100vh;
-  overflow-y: auto;
-}
+
 
 /* Order Panel */
 .order-panel {
@@ -30,7 +22,7 @@
 /* Main Content */
 .content {
   margin-top: 60px;
-  margin-left: 16.66%;
+  /* margin-left: 16.66%; */
   margin-right: 25%;
   height: calc(100vh - 60px);
 }
@@ -42,7 +34,7 @@
 }
 
 .card-img-top{
-    height: 200px;
+    height: 140px;
     /* font-size: 50px; */
     /* font-weight: bold; */
 }

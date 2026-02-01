@@ -16,6 +16,11 @@ function decreaseQty(btn) {
 }
 
 
+function addToCart(btn) {
+
+    
+}
+
 
 // let arrayList = JSON.parse(localStorage.getItem("cart")) || [];
 
