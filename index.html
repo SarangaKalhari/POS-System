@@ -27,11 +27,11 @@
                 </div>
 
                 <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="#">All</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Burgers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Beverages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Desserts</a></li>
-                    <li class="nav-item"><a class="nav-link " href="#">Appetizers</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">All</a></li>
+                    <li class="nav-item"><a class="nav-link" href="burgers.html">Burgers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="beverages.html">Beverages</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="">Desserts</a></li> -->
+                    <li class="nav-item"><a class="nav-link " href="appetizers.html">Appetizers</a></li>
                 </ul>
             </div>
 
@@ -50,10 +50,10 @@
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
+                                        onclick="decreaseQty(this)" id="decrease">−</button>
+                                    <span class="fw-bold qty" id="increase">1</span>
                                     <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
+                                        onclick="increaseQty(this)" >+</button>
                                 </div>
 
                                 <h6 class="text-center">Rs. <span>600.00</span></h6>
