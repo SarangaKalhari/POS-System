@@ -44,19 +44,19 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/chicken_burger.png" class="card-img-top">
+                            <img src="assets/image/burgers/chicken_burger.png" class="card-img-top" id="item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center">Single Chicken Burger</h6>
+                                <h6 class="text-center " id="item-name">Single Chicken Burger</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
                                         onclick="decreaseQty(this)" id="decrease">−</button>
-                                    <span class="fw-bold qty" id="increase">1</span>
+                                    <span class="fw-bold qty" id="item-qty">1</span>
                                     <button class="btn btn-outline-secondary btn-sm"
                                         onclick="increaseQty(this)" >+</button>
                                 </div>
 
-                                <h6 class="text-center">Rs. <span>600.00</span></h6>
+                                <h6 class="text-center">Rs. <span id="item-price">600.00</span></h6>
                                 <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
                             </div>
                         </div>
