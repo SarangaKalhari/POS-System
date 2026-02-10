@@ -1,4 +1,4 @@
-console.log("hello !")
+console.log("hello !");
 
 // localStorage.clear();
 
@@ -61,6 +61,18 @@ const image = card.querySelector("img").src;
     localStorage.setItem("cart", JSON.stringify(cart));
 
     console.log(cart);
+
+    updateOrderPanel();
+}
+
+
+function removeItem(index) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.splice(index, 1);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
 
     updateOrderPanel();
 }
@@ -129,21 +141,68 @@ function updateOrderPanel() {
 }
 
 
-function removeItem(index) {
-
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    cart.splice(index, 1);
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    updateOrderPanel();
-}
 
 
 window.onload = function () {
+    localStorage.removeItem("cart"); // testing ekata
     updateOrderPanel();
 }
 
+function printBill() {
 
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cart.length === 0) {
+        alert("Cart is empty!");
+        return;
+    }
+
+    let total = 0;
+    let billContent = `
+        <h2 style="text-align:center;">MOS Burgers</h2>
+        <hr>
+    `;
+
+    cart.forEach(item => {
+        const itemTotal = item.price * item.qty;
+        total += itemTotal;
+
+        billContent += `
+            <p>
+                ${item.name} <br>
+                ${item.qty} x Rs ${item.price} 
+                <span style="float:right;">
+                    Rs ${itemTotal.toFixed(2)}
+                </span>
+            </p>
+        `;
+    });
+
+    billContent += `
+        <hr>
+        <h3>Total: Rs ${total.toFixed(2)}</h3>
+        <p style="text-align:center;">Thank You Come Again!</p>
+    `;
+
+    // Open new window for printing
+    let printWindow = window.open('', '', 'width=400,height=600');
+
+    printWindow.document.write(`
+        <html>
+        <head>
+            <title>Print Bill</title>
+        </head>
+        <body style="font-family:monospace;">
+            ${billContent}
+        </body>
+        </html>
+    `);
+
+    printWindow.document.close();
+    printWindow.print();
+
+    // Optional: Clear cart after printing
+    localStorage.removeItem("cart");
+    updateOrderPanel();
+}
 

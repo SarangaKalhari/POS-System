@@ -1,41 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOS Burgers</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant POS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="container-fluid">
+<body class="bg-gray-100 font-sans">
 
-    <div class="row">
+<div class="flex h-screen ">
 
-        <!-- LEFT SIDEBAR -->
-        <div class="col-12 col-md-9 content ">
+  <!-- Sidebar -->
+  <div class="w-20 bg-white shadow-lg flex flex-col items-center py-6 space-y-6">
+    <div class="bg-blue-500 text-white p-3 rounded-xl">🍽</div>
+    <div class="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">📦</div>
+    <div class="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">📅</div>
+    <div class="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">💬</div>
+    <div class="mt-auto p-3 text-red-500 cursor-pointer">⎋</div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 p-6 overflow-auto">
+
+    <!-- Search -->
+    <input 
+      type="text"
+      placeholder="Search Your Menu Here"
+      class="w-full p-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+
+    <!-- Categories -->
+    <div class="grid grid-cols-4 gap-4 mt-6">
+
+      <div class="bg-white p-4 rounded-xl shadow hover:bg-blue-500 hover:text-white cursor-pointer">
+        <h4 class="font-semibold">Breakfast</h4>
+        <p class="text-sm">12 Menu In Stock</p>
+      </div>
+
+      <div class="bg-blue-500 text-white p-4 rounded-xl shadow cursor-pointer">
+        <h4 class="font-semibold">Lunch</h4>
+        <p class="text-sm">12 Menu In Stock</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow cursor-pointer">
+        <h4 class="font-semibold">Dinner</h4>
+        <p class="text-sm">12 Menu In Stock</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow cursor-pointer">
+        <h4 class="font-semibold">Soup</h4>
+        <p class="text-sm">12 Menu In Stock</p>
+      </div>
+
+    </div>
+
+    <!-- Menu Items -->
+    <h2 class="text-xl font-semibold mt-8 mb-4">Lunch Menu</h2>
+
+    <div class="grid grid-cols-3 gap-6">
+
+      <!-- Card -->
+      <div class="bg-white p-4 rounded-xl shadow">
+        <div class="flex gap-3">
+          <img src="https://source.unsplash.com/80x80/?pasta" class="rounded-lg"/>
+          <div>
+            <h3 class="font-semibold">Pasta Bolognese</h3>
+            <p class="text-sm text-gray-500">Delicious pasta with beef</p>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center mt-4">
+          <span class="font-bold text-lg">$50.5</span>
+
+          <div class="flex items-center gap-2">
+            <button class="bg-gray-200 px-3 py-1 rounded">-</button>
+            <span>2</span>
+            <button class="bg-blue-500 text-white px-3 py-1 rounded">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-4 rounded-xl shadow">
+        <div class="flex gap-3">
+          <img src="https://source.unsplash.com/80x80/?fried-chicken" class="rounded-lg"/>
+          <div>
+            <h3 class="font-semibold">Spicy Fried Chicken</h3>
+            <p class="text-sm text-gray-500">Crispy spicy chicken</p>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center mt-4">
+          <span class="font-bold text-lg">$45.7</span>
+
+          <div class="flex items-center gap-2">
+            <button class="bg-gray-200 px-3 py-1 rounded">-</button>
+            <span>2</span>
+            <button class="bg-blue-500 text-white px-3 py-1 rounded">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-4 rounded-xl shadow">
+        <div class="flex gap-3">
+          <img src="https://source.unsplash.com/80x80/?steak" class="rounded-lg"/>
+          <div>
+            <h3 class="font-semibold">Grilled Steak</h3>
+            <p class="text-sm text-gray-500">Premium grilled steak</p>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center mt-4">
+          <span class="font-bold text-lg">$80.0</span>
+
+          <div class="flex items-center gap-2">
+            <button class="bg-gray-200 px-3 py-1 rounded">-</button>
+            <span>0</span>
+            <button class="bg-blue-500 text-white px-3 py-1 rounded">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Invoice Panel -->
+  <div class="w-80 bg-white shadow-lg p-6">
+
+    <h2 class="text-lg font-semibold mb-4">Invoice</h2>
+
+    <!-- Item -->
+    <div class="flex justify-between mb-4">
+      <div>
+        <p class="font-semibold">Pasta Bolognese</p>
+        <span class="text-sm text-gray-500">2x</span>
+      </div>
+      <span>$50.5</span>
+    </div>
+
+    <div class="flex justify-between mb-4">
+      <div>
+        <p class="font-semibold">Spicy Fried Chicken</p>
+        <span class="text-sm text-gray-500">2x</span>
+      </div>
+      <span>$45.7</span>
+    </div>
+
+    <!-- Summary -->
+    <div class="border-t pt-4 mt-4 space-y-2">
+      <div class="flex justify-between">
+        <span>Sub Total</span>
+        <span>$131.2</span>
+      </div>
+
+      <div class="flex justify-between">
+        <span>Tax</span>
+        <span>$5.2</span>
+      </div>
+
+      <div class="flex justify-between font-bold">
+        <span>Total</span>
+        <span>$136.4</span>
+      </div>
+    </div>
+
+    <!-- Payment -->
+    <div class="grid grid-cols-3 gap-2 mt-6">
+      <button class="bg-blue-500 text-white p-2 rounded-lg">Card</button>
+      <button class="bg-gray-100 p-2 rounded-lg">Paylater</button>
+      <button class="bg-gray-100 p-2 rounded-lg">Cash</button>
+    </div>
+
+    <button class="w-full bg-blue-500 text-white mt-6 py-3 rounded-xl font-semibold">
+      Place An Order
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>
 
 
 
-            <!-- TOP BAR (FIXED INSIDE CONTENT) -->
-            <div class="top-bar bg-white border-bottom p-3">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h4 class="mb-0">Menu</h4>
-                    <input class="form-control w-75" placeholder="Search products...">
-                </div>
+<!-- ///////////////////////////////////////////
+  -->
 
-                <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">All</a></li>
-                    <li class="nav-item"><a class="nav-link" href="burgers.html">Burgers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="beverages.html">Beverages</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="">Desserts</a></li> -->
-                    <li class="nav-item"><a class="nav-link " href="appetizers.html">Appetizers</a></li>
-                </ul>
-            </div>
-
-            <!-- PRODUCTS AREA (ONLY THIS SCROLLS) -->
+  <!-- PRODUCTS AREA (ONLY THIS SCROLLS) -->
             <div class="products-area flex-grow-1 overflow-auto p-3">
                 <div class="row g-6">
 
@@ -44,19 +199,19 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/chicken_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/beverages/red_velvet_frappe.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Single Chicken Burger</h6>
+                                <h6 class="text-center">Red Velvet Frappe</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm" onclick="decreaseQty(this)"
-                                        id="decrease">−</button>
-                                    <span class="fw-bold qty" >1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
                                     <button class="btn btn-outline-secondary btn-sm"
                                         onclick="increaseQty(this)">+</button>
                                 </div>
 
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <h6 class="text-center">Rs. <span>600.00</span></h6>
                                 <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
                             </div>
                         </div>
@@ -65,7 +220,7 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/chrispy chicken burger.png" class="card-img-top item-image">
+                            <img src="assets/image/beverages/Watermelon_Juice.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h6 class="text-center">Single Crispy Chicken Burger</h6>
 
@@ -87,7 +242,7 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/cheese chicken burger.png" class="card-img-top item-image">
+                            <img src="assets/image/beverages/Mango_Juice.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h6 class="text-center">Cheesy Chicken Burger</h6>
 
@@ -108,7 +263,7 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/bacon_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/burgers/bacon_burger.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h6 class="text-center">Bacon Chicken Burger</h6>
 
@@ -129,7 +284,7 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/juicy chicken burger.png" class="card-img-top item-image">
+                            <img src="assets/image/burgers/juicy chicken burger.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h6 class="text-center">juicy Chicken Burger</h6>
 
@@ -150,7 +305,7 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/juicy_hamburger.png" class="card-img-top item-image">
+                            <img src="assets/image/burgers/juicy_hamburger.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h6 class="text-center">Hamburger</h6>
 
@@ -171,7 +326,7 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/large_hamburger.png" class="card-img-top item-image">
+                            <img src="assets/image/burgers/large_hamburger.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h6 class="text-center">Hamburger (Large)</h6>
 
@@ -192,7 +347,7 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/bacon_cheese_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/burgers/bacon_cheese_burger.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h6 class="text-center">Bacon Cheese Burger</h6>
 
@@ -213,7 +368,7 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/bbq_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/burgers/bbq_burger.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h6 class="text-center">BBQ Chicken Burger</h6>
 
@@ -234,7 +389,7 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/double_chicken_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/burgers/double_chicken_burger.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h6 class="text-center">Double Chicken Burger</h6>
 
@@ -255,7 +410,7 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/double_cheese_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/burgers/double_cheese_burger.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h6 class="text-center">Double Cripy Chicken Burger</h6>
 
@@ -277,7 +432,7 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/Creamy_Chicken_Burger.png" class="card-img-top item-image">
+                            <img src="assets/image/burgers/Creamy_Chicken_Burger.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h6 class="text-center">Creamy Chicken Burger</h6>
 
@@ -301,7 +456,7 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/beef burger.png" class="card-img-top item-image">
+                            <img src="assets/image/burgers/beef burger.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h6 class="text-center">Single Beef Burger</h6>
 
@@ -554,178 +709,8 @@
                         </div>
                     </div>
 
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/ham_sandwich.png" class="card-img-top">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center">Ham Sandwich</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span>600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/chicken sandwich.png" class="card-img-top">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center">Chicken Sandwich</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span>600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/bbq_sandwich.png" class="card-img-top">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center">BBQ Chicken Sandwich</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span>600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/beef_sandwich.png" class="card-img-top">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center">Beef Sandwich</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span>600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/beef whopper.png" class="card-img-top">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center">Beef Whopper</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span>600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/French_Fries.png" class="card-img-top">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center">French Fries</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span>600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
 
                     <!-- //////////////////////////////////////// -->
 
                 </div>
             </div>
-
-
-        </div>
-
-        <!-- RIGHT ORDER PANEL -->
-        <div class="col-12 col-md-3 bg-white border-start p-3 d-flex flex-column order-panel">
-
-            <!-- Title -->
-            <div>
-                <h5 class="mb-3">🛒 Order Details</h5>
-                <hr>
-            </div>
-
-            <!-- Order Items (Scrollable Area) -->
-            <div id="orderItems" class="flex-grow-1 overflow-auto mb-3">
-                <!-- Items will load dynamically here -->
-            </div>
-
-            <hr>
-
-            <!-- Total Section -->
-            <div class="d-flex justify-content-between align-items-center">
-                <h6 class="mb-0">Total:</h6>
-                <h6 class="mb-0">Rs <span id="total">0.00</span></h6>
-            </div>
-
-            <!-- Button -->
-            <button class="btn btn-warning w-100 mt-3" onclick="printBill()">
-                Proceed Payment
-            </button>
-
-        </div>
-
-
-    </div>
-
-
-    <script src="assets/js/app.js"></script>
-
-</body>
-
-</html>
