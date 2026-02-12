@@ -41,7 +41,7 @@ function addToCart(btn) {
     const name = card.querySelector(".item-name").innerText;
     const price = parseFloat(card.querySelector(".price").innerText);
     const qty = parseInt(card.querySelector(".qty").innerText);
-const image = card.querySelector("img").src;
+    const image = card.querySelector("img").src;
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
