@@ -24,14 +24,418 @@
 
                 <ul class="nav nav-pills">
                     <li class="nav-item"><a class="nav-link" href="index.html">All</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="burgers.html">Burgers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="beverages.html">Beverages</a></li>
+                    <li class="nav-item"><a class="nav-link " href="burgers.html">Burgers</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="beverages.html">Beverages</a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="#">Desserts</a></li> -->
                     <li class="nav-item"><a class="nav-link " href="appetizers.html">Appetizers</a></li>
                 </ul>
             </div>
 
-            
+            <!-- PRODUCTS AREA (ONLY THIS SCROLLS) -->
+            <div class="products-area flex-grow-1 overflow-auto p-3">
+                <div class="row g-3">
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/beverages/avocado-juice.png" class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">avocado juice</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COPY SAME CARD FOR OTHERS -->
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/beverages/caramel_frappe.png" class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Chicken Nuggets</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/beverages/falooda.png" class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Chicken Wings</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/beverages/Lime_Juice.png"
+                                class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Garlic Bread</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/beverages/mango_falooda.png" class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Bruschetta</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/beverages/Mango_Juice.png"
+                                class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Garlic Shrimp</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/beverages/Mixed_Fruit_Juice.png" class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Crispy Prawns</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/beverages/red_velvet_frappe.png" class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Cheese Balls</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/beverages/Orange_Juice.png"
+                                class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Chicken Popcorn</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/beverages/Pineapple_Juice.png" class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Corn Fritters</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/appetizers/Loaded_Cheese_Fries-removebg-preview.png"
+                                class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Loaded Cheese Fries</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/appetizers/Mozzarella_Sticks-removebg-preview.png"
+                                class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Mozzarella Sticks</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/appetizers/Nachos_with_Salsa___Cheese-removebg-preview.png"
+                                class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Nachos with Salsa</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/appetizers/Quesadillas-removebg-preview.png"
+                                class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Quesadillas</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/appetizers/Tacos_mini-removebg-preview.png"
+                                class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Tacos mini</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/beverages/avocado-juice.png"
+                                class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Veg Cutlets</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/appetizers/Vegetable_Samosa-removebg-preview.png"
+                                class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Vegetable Samosa</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/appetizers/Fish_Fingers-removebg-preview.png"
+                                class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Fish Fingers</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
 
         </div>
 
