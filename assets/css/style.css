@@ -15,8 +15,9 @@
   height: 100vh;
   overflow: hidden;
   padding: 1rem;
-  background: #fff;
+  /* background: #fff; */
   border-left: 1px solid #ddd;
+  background-color: #f2f2f0;
 }
 
 /* Main Content */
@@ -37,4 +38,19 @@
     height: 140px;
     /* font-size: 50px; */
     /* font-weight: bold; */
+}
+
+
+body{
+  background-color: #f2f2f0;
+}
+
+.card{
+  border-radius: 20px;
+  cursor: pointer;
+  
+}
+
+button{
+  border-radius: 30px;
 }
