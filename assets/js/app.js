@@ -209,3 +209,45 @@ function printBill() {
     updateOrderPanel();
 }
 
+document.getElementById("searchInput").addEventListener("keydown", function (event) {
+
+    if (event.key === "Enter") {
+        searchProducts();
+        console.log(document.getElementById("searchInput").value);
+
+    }
+
+});
+
+console.log(document.getElementById("searchInput").value);
+
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", function () {
+    searchProducts();
+});
+
+searchInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        searchProducts();
+    }
+});
+
+function searchProducts() {
+
+    const input = searchInput.value.toLowerCase();
+
+    const cards = document.querySelectorAll(".col-12.col-sm-6.col-lg-2");
+
+    cards.forEach(card => {
+
+        const name = card.querySelector(".item-name").innerText.toLowerCase();
+
+        if (name.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+}
