@@ -141,6 +141,9 @@ function updateOrderPanel() {
 }
 
 
+// document.addEventListener("DOMContentLoaded", function(){
+//     updateOrderPanel();
+// })
 
 
 window.onload = function () {
