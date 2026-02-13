@@ -6,32 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOS Burgers</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body class="container-fluid vh-100 overflow-hidden">
 
+
     <div class="row h-100">
 
-        <!-- LEFT SIDEBAR -->
-        <div class="col-12 col-md-9  d-flex flex-column h-100">
 
 
+        <!-- MAIN CONTENT -->
+        <div class="col-12 col-md-9 content d-flex flex-column">
 
-            <!-- TOP BAR (FIXED INSIDE CONTENT) -->
+            <!-- TOP BAR (FIXED INSIDE CONTENT)  -->
             <div class="top-bar bg-white border-bottom p-3">
                 <div class="d-flex justify-content-between align-items-center mb-2">
                     <h4 class="mb-0">Menu</h4>
-                    <input class="form-control w-75" placeholder="Search products..." id="searchInput" >
+                    <input class="form-control w-50" placeholder="Search products..." id="searchInput">
                 </div>
 
                 <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Burgers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Burgers</a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="burgers.html">Burgers</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="beverages.html">Beverages</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="">Desserts</a></li> -->
-                    <li class="nav-item"><a class="nav-link " href="appetizers.html">Appetizers</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#">Desserts</a></li> -->
+                    <li class="nav-item"><a class="nav-link active" href="appetizers.html">Appetizers</a></li>
                 </ul>
             </div>
 
@@ -39,19 +41,40 @@
             <div class="products-area flex-grow-1 overflow-auto p-3">
                 <div class="row g-3">
 
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/appetizers/chicken_drumstick.png" class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Chicken Drumsticks</h6>
 
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COPY SAME CARD FOR OTHERS -->
 
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/chicken_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Chicken_Nuggets.png" class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Single Chicken Burger</h6>
+                                <h6 class="text-center item-name">Chicken Nuggets</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm" onclick="decreaseQty(this)"
-                                        id="decrease">−</button>
-                                    <span class="fw-bold qty" >1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
                                     <button class="btn btn-outline-secondary btn-sm"
                                         onclick="increaseQty(this)">+</button>
                                 </div>
@@ -65,9 +88,9 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/chrispy chicken burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Chicken_Wings.png" class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Single Crispy Chicken Burger</h6>
+                                <h6 class="text-center item-name">Chicken Wings</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -87,9 +110,10 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/cheese chicken burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Garlic_Bread-removebg-preview.png"
+                                class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Cheesy Chicken Burger</h6>
+                                <h6 class="text-center item-name">Garlic Bread</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -108,9 +132,9 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/bacon_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Bruschetta.png" class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Bacon Chicken Burger</h6>
+                                <h6 class="text-center item-name">Bruschetta</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -129,9 +153,10 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/juicy chicken burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Garlic_Shrimp-removebg-preview.png"
+                                class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">juicy Chicken Burger</h6>
+                                <h6 class="text-center item-name">Garlic Shrimp</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -150,9 +175,9 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/juicy_hamburger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Crispy_Prawns.png" class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Hamburger</h6>
+                                <h6 class="text-center item-name">Crispy Prawns</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -171,9 +196,9 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/large_hamburger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Cheese Balls.png" class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Hamburger (Large)</h6>
+                                <h6 class="text-center item-name">Cheese Balls</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -192,9 +217,10 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/bacon_cheese_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Popcorn_Chicken-removebg-preview.png"
+                                class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Bacon Cheese Burger</h6>
+                                <h6 class="text-center item-name">Chicken Popcorn</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -213,9 +239,33 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/bbq_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Corn_Fritters.png" class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">BBQ Chicken Burger</h6>
+                                <h6 class="text-center item-name">Corn Fritters</h6>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="decreaseQty(this)">−</button>
+                                    <span class="fw-bold qty">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm"
+                                        onclick="increaseQty(this)">+</button>
+                                </div>
+
+                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
+                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- CARD -->
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <div class="card h-100">
+                            <img src="assets/image/appetizers/Loaded_Cheese_Fries-removebg-preview.png"
+                                class="card-img-top item-image">
+                            <div class="card-body d-flex flex-column">
+                                <h6 class="text-center item-name">Loaded Cheese Fries</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -234,9 +284,10 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/double_chicken_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Mozzarella_Sticks-removebg-preview.png"
+                                class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Double Chicken Burger</h6>
+                                <h6 class="text-center item-name">Mozzarella Sticks</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -255,55 +306,10 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/double_cheese_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Nachos_with_Salsa___Cheese-removebg-preview.png"
+                                class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Double Cripy Chicken Burger</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/Creamy_Chicken_Burger.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Creamy Chicken Burger</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- /////////// Beef ////////////////////// -->
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/beef burger.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Single Beef Burger</h6>
+                                <h6 class="text-center item-name">Nachos with Salsa</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -322,9 +328,10 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/large beef burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Quesadillas-removebg-preview.png"
+                                class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Beef Burger (Large)</h6>
+                                <h6 class="text-center item-name">Quesadillas</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -343,9 +350,10 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/korean combo beef burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Tacos_mini-removebg-preview.png"
+                                class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Korean Beef Burger</h6>
+                                <h6 class="text-center item-name">Tacos mini</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -364,9 +372,10 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/bacon_beef_burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Veg_Cutlets-removebg-preview.png"
+                                class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Bacon Beef Burger</h6>
+                                <h6 class="text-center item-name">Veg Cutlets</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -385,9 +394,10 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/double beef burger large.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Vegetable_Samosa-removebg-preview.png"
+                                class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Double Beef Burger</h6>
+                                <h6 class="text-center item-name">Vegetable Samosa</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -406,9 +416,10 @@
                     <!-- CARD -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="card h-100">
-                            <img src="assets/image/burgers/cheese double beef burger.png" class="card-img-top item-image">
+                            <img src="assets/image/appetizers/Fish_Fingers-removebg-preview.png"
+                                class="card-img-top item-image">
                             <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Cheese Double Beef Burger</h6>
+                                <h6 class="text-center item-name">Fish Fingers</h6>
 
                                 <div class="d-flex justify-content-center align-items-center gap-2 my-3">
                                     <button class="btn btn-outline-secondary btn-sm"
@@ -423,276 +434,16 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <!-- ////////////Veggi ////////////// -->
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/veg_burger.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Veggie Burger</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/cheese_veg_burger.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Cheese Veggie Burger</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/veggie burger combo.png" class="card-img-top item-image"
-                                id="productImg">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name" id="productName">Veggie Burger combo</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/juicy veggie burger.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Juicy Veggie Burger</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/special veg burger.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Special Veg Burger</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/cheese crispy chicken burger.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Cheese Single Chicken Burger</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/ham_sandwich.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Ham Sandwich</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/chicken sandwich.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Chicken Sandwich</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/bbq_sandwich.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">BBQ Chicken Sandwich</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/beef_sandwich.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Beef Sandwich</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/beef whopper.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">Beef Whopper</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- CARD -->
-                    <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="card h-100">
-                            <img src="assets/image/burgers/French_Fries.png" class="card-img-top item-image">
-                            <div class="card-body d-flex flex-column">
-                                <h6 class="text-center item-name">French Fries</h6>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2 my-3">
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="decreaseQty(this)">−</button>
-                                    <span class="fw-bold qty">1</span>
-                                    <button class="btn btn-outline-secondary btn-sm"
-                                        onclick="increaseQty(this)">+</button>
-                                </div>
-
-                                <h6 class="text-center">Rs. <span class="price">600.00</span></h6>
-                                <button class="btn btn-dark w-100 mt-auto" onclick="addToCart(this)">Add</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- //////////////////////////////////////// -->
 
                 </div>
             </div>
 
 
+
         </div>
 
         <!-- RIGHT ORDER PANEL -->
-        <div class="col-12 col-md-3 bg-white border-start p-3 d-flex flex-column order-panel">
+        <div class="col-12 col-md-3 bg-white border-start p-3 d-flex flex-column order-panel h-100">
 
             <!-- Title -->
             <div>
@@ -721,11 +472,14 @@
         </div>
 
 
+
     </div>
+
 
 
     <script src="assets/js/app.js"></script>
 
 </body>
+
 
 </html>

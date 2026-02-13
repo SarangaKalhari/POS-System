@@ -1,0 +1,40 @@
+/* Navbar */
+.navbar {
+  height: 60px;
+  z-index: 1050;
+}
+
+
+
+/* Order Panel */
+.order-panel {
+  position: fixed;
+  /* top: 60px; */
+  right: 5px;
+  width: 25%; /* col-md-3 */
+  height: 100vh;
+  overflow: hidden;
+  padding: 1rem;
+  background: #fff;
+  border-left: 1px solid #ddd;
+}
+
+/* Main Content */
+.content {
+  margin-top: 60px;
+  /* margin-left: 16.66%; */
+  margin-right: 25%;
+  height: calc(100vh - 60px);
+}
+
+.products-area {
+  height: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.card-img-top{
+    height: 140px;
+    /* font-size: 50px; */
+    /* font-weight: bold; */
+}
