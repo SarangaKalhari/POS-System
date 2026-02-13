@@ -3,6 +3,7 @@ console.log("hello !");
 // localStorage.clear();
 
 
+// ---------- Increase & decrease QTY on items-----------
 function increaseQty(btn) {
     let qtySpan = btn.parentElement.querySelector(".qty");
     let qty = parseInt(qtySpan.innerText);
@@ -32,6 +33,98 @@ function changeQty(index, amount) {
 
     updateOrderPanel();
 }
+
+// function increaseBtn(btn) {
+
+//     let card = btn.closest(".card");
+
+//     // let qtySpan = card.querySelector(".qty");
+//     let portionSpan = card.querySelector(".portion");
+//     let priceSpan = card.querySelector(".price");
+
+//     let qty = parseInt(qtySpan.innerText);
+//     qty++;
+
+//     // qtySpan.innerText = qty;
+
+//     updatePortionAndPrice( portionSpan, priceSpan);
+// }
+
+// function decreaseBtn(btn) {
+
+//     let card = btn.closest(".card");
+
+//     // let qtySpan = card.querySelector(".qty");
+//     let portionSpan = card.querySelector(".portion");
+//     let priceSpan = card.querySelector(".price");
+
+//     let qty = parseInt(qtySpan.innerText);
+
+//     // if (qty > 1) {
+//         // qty--;
+//         // qtySpan.innerText = qty;
+//         updatePortionAndPrice( portionSpan, priceSpan);
+//     // }
+// }
+
+// function updatePortionAndPrice( portionSpan, priceSpan) {
+
+//     let price = 600;
+
+//     if (portionSpan === "Small") {
+//         // portionSpan.innerText = "Small";
+//         price = 600;
+//     } 
+//     else if (portionSpan === "Regular") {
+//         portionSpan.innerText = "Regular";
+//         price = 850;
+//     } 
+//     else if (qty === 3) {
+//         portionSpan.innerText = "Large";
+//         price = 1200;
+//     } 
+//     else {
+//         portionSpan.innerText = "Full";
+//         price = 1500;
+//     }
+
+//     priceSpan.innerText = price.toFixed(2);
+// }
+
+
+// function addToCart(btn) {
+
+//     const card = btn.closest(".card");
+
+//     const name = card.querySelector(".item-name").innerText;
+//     const price = parseFloat(card.querySelector(".price").innerText);
+//     const qty = parseInt(card.querySelector(".qty").innerText);
+//     const portion = card.querySelector(".portion").innerText;
+//     const image = card.querySelector("img").src;
+
+//     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+//     const existingItem = cart.find(item => 
+//         item.name === name && item.portion === portion
+//     );
+
+//     if (existingItem) {
+//         existingItem.qty += qty;
+//     } else {
+//         cart.push({
+//             name: name,
+//             price: price,
+//             qty: qty,
+//             portion: portion,
+//             image: image
+//         });
+//     }
+
+//     localStorage.setItem("cart", JSON.stringify(cart));
+
+//     updateOrderPanel();
+// }
+
 
 
 function addToCart(btn) {
@@ -76,6 +169,7 @@ function removeItem(index) {
 
     updateOrderPanel();
 }
+
 
 function updateOrderPanel() {
 
