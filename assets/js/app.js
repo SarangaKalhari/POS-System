@@ -187,7 +187,7 @@ function updateOrderPanel() {
         total += itemTotal;
 
         orderContainer.innerHTML += `
-            <div class="d-flex justify-content-between align-items-start border-bottom py-2">
+            <div class="d-flex justify-content-between align-items-start border-bottom py-2 bg-white" style="border-radius: 10px">
 
                 <!-- LEFT SIDE -->
                 <div class="d-flex align-items-center gap-2">
